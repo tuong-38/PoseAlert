@@ -9,8 +9,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Set up Python 3.11
         uses: actions/setup-python@v3
@@ -25,4 +27,5 @@ jobs:
       - name: Lint with flake8
         run: |
           pip install flake8
+          # Chỉ quét thư mục src để tránh quét nhầm venv
           flake8 src --count --select=E9,F63,F7,F82 --show-source --statistics
