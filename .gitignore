@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Môi trường ảo (Rất quan trọng để không đẩy lên GitHub)
+venv/
+env/
+ENV/
+
+# Thông tin bảo mật (Chứa IP Camera)
+.env
+
+# Cấu hình của VS Code
+.vscode/
+
+# Thư viện và dữ liệu rác
+.DS_Store
